@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 1300px;
+            height: 700px;
+            background-image: url("images/j.jpg");
+            background-size: 1300px 700px;
+            position: relative;
+            /*perspective: 100px;*/
+        }
+        .sm{
+            width: 300px;
+            height: 300px;
+            right: 150px;
+            bottom: 200px;
+            transform-style: preserve-3d;
+            transform: rotateX(-20deg);
+            animation: fadeIn 5s linear infinite;
+            position: absolute;
+
+        }
+        img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            height: 200px;
+        }
+        .sm img:nth-child(1){
+            transform: rotateY(60deg) translateZ(300px);
+            /*transform: rotateX();*/
+
+        }
+        .sm img:nth-child(2){
+            transform:rotateY(120deg) translateZ(300px);
+            /*transform: rotateX();*/
+        }
+        .sm img:nth-child(3){
+            transform: rotateY(180deg) translateZ(300px);
+            /*transform: rotateX();*/
+        }
+        .sm img:nth-child(4){
+            transform: rotateY(240deg) translateZ(300px);
+            /*transform: rotateX();*/
+        }
+        .sm img:nth-child(5){
+            transform: rotateY(300deg) translateZ(300px);
+            /*transform: rotateX();*/
+        }
+        .sm img:nth-child(6){
+            transform: rotateY(360deg) translateZ(300px);
+            /*transform: rotateX();*/
+        }
+        @keyframes fadeIn {
+            from{
+                transform: rotateX(-20deg) rotateY(0deg);
+            }
+            to{
+                transform: rotateX(-20deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="box">
+            <div class="sm">
+                    <img src="images/N1.jpg" alt="">
+                    <img src="images/N2.jpg" alt="">
+                    <img src="images/N3.jpg" alt="">
+                    <img src="images/N4.jpg" alt="">
+                    <img src="images/N5.jpg" alt="">
+                    <img src="images/N6.jpg" alt="">
+            </div>
+        </div>
+</body>
+</html>
